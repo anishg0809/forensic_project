@@ -1,1 +1,3 @@
-| 2026-10-08 | Launched MTCNN full FF++ extraction (`preprocess_ffpp_mtcnn.py`) across all 6000 videos (50 frames/real, 10 frames/fake) onto GPU CUDA with leak-free Union-Find split. Target output: `data_cache/ffpp_faces_jpg` | src/preprocessing/preprocess_ffpp_mtcnn.py | Task running in background. |
+| 2026-10-08 |
+••Launched MTCNN full FF++ extraction (`preprocess_ffpp_mtcnn.py`) across all 6000 videos (50 frames/real, 10 frames/fake) onto GPU CUDA with leak-free Union-Find split. Target output: `data_cache/ffpp_faces_jpg` | src/preprocessing/preprocess_ffpp_mtcnn.py | Task running in background. 
+••Audio transcription with timeline at word level by using pretrained whisperX. 
