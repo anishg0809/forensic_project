@@ -1,3 +1,5 @@
 | 2026-10-08 |
 ••Launched MTCNN full FF++ extraction (`preprocess_ffpp_mtcnn.py`) across all 6000 videos (50 frames/real, 10 frames/fake) onto GPU CUDA with leak-free Union-Find split. Target output: `data_cache/ffpp_faces_jpg` | src/preprocessing/preprocess_ffpp_mtcnn.py | Task running in background. 
 ••Audio transcription with timeline at word level by using pretrained whisperX. 
+| 2026-10-08 | Full FF++ MTCNN face extraction completed successfully: 99,975 total crops saved to `data_cache/ffpp_faces_jpg/`. Exactly 50% fake / 50% real across all splits (Train: 68,180 crops, Val: 16,198 crops, Test: 15,597 crops). All 6 manipulation methods represented with zero actor-leakage. | data_cache/ffpp_faces_jpg/manifest.csv | Ready for EfficientNet-B0 frame/temporal training. |
+| 2026-10-08 | Started training EfficientNet-B0 (`train_effb0.py`) on 99,975 FF++ crops (Train: 68,180 crops, Val: 16,198 crops, Test: 15,597 crops) with ImageNet weights, OneCycleLR, AMP (float16) on CUDA RTX 3050. Run directory: `runs/effb0_v1/`. | src/training/train_effb0.py, runs/effb0_v1/ | Training running in background. |
